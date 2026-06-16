@@ -1,9 +1,11 @@
-/* =========================
-   INK TO SOUL
-   OFFICIAL STYLE
-========================= */
+/*```css*/
+/*==================================================
+                INK TO SOUL
+               OFFICIAL STYLE.CSS
+                  VERSION 3.0
+==================================================*/
 
-/* RESET */
+/*============== RESET ==============*/
 
 *{
     margin:0;
@@ -11,203 +13,660 @@
     box-sizing:border-box;
 }
 
-/* =========================
-   BODY
-========================= */
-
-body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:linear-gradient(to bottom, #ffffff, #e8f1ff);
-    color:#333;
-    line-height:1.8;
+html{
+    scroll-behavior:smooth;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+body{
+
+    font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+
+    background:linear-gradient(180deg,#f8fbff,#edf4ff,#e8f1ff);
+
+    color:#353535;
+
+    line-height:1.9;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+}
+
+/*============== LINKS ==============*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/*============== IMAGES ==============*/
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/*============== HERO ==============*/
 
 .hero{
+
     background:#b3d1ff;
+
     text-align:center;
+
     padding:70px 20px;
-    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.hero-logo{
+
+    width:120px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    transition:.4s;
+
+}
+
+.hero-logo:hover{
+
+    transform:scale(1.05);
+
 }
 
 .hero h1{
-    font-size:4rem;
+
+    font-size:clamp(2.6rem,5vw,4rem);
+
     color:#2d5da8;
-    margin-bottom:15px;
-    letter-spacing:2px;
+
+    letter-spacing:3px;
+
+    margin-bottom:10px;
+
 }
 
 .subtitle{
-    font-size:1.3rem;
-    color:#444;
+
+    font-size:1.15rem;
+
+    color:#4c4c4c;
+
 }
 
-/* =========================
-   MAIN CONTAINER
-========================= */
+/*============== MAIN ==============*/
 
 .main-container{
-    max-width:1000px;
-    margin:50px auto;
-    padding:20px;
+
+    width:min(1150px,92%);
+
+    margin:60px auto;
+
 }
 
-/* =========================
-   INTRO SECTION
-========================= */
+/*============== INTRO ==============*/
 
 .intro-section{
+
     background:white;
+
     padding:50px;
-    border-radius:18px;
-    box-shadow:0 5px 18px rgba(0,0,0,0.08);
+
+    border-radius:22px;
+
     text-align:center;
-    margin-bottom:50px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.07);
+
+    margin-bottom:60px;
+
 }
 
 .intro-section h2{
-    font-size:2.5rem;
+
     color:#2d5da8;
+
+    font-size:2.2rem;
+
     margin-bottom:25px;
+
 }
 
 .intro-section p{
-    font-size:1.1rem;
-    color:#444;
-    margin-bottom:20px;
-    line-height:2;
+
+    max-width:750px;
+
+    margin:auto;
+
+    margin-bottom:15px;
+
+    color:#555;
+
 }
 
-/* =========================
-   FEATURED SECTION
-========================= */
+/*============== POEM GRID ==============*/
 
 .featured-section{
-    text-align:center;
-    margin-bottom:50px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
 }
 
-.featured-section h2{
-    font-size:2.3rem;
-    margin-bottom:35px;
-    color:#333;
-}
-
-/* =========================
-   POEM CARDS
-========================= */
+/*============== POEM CARD ==============*/
 
 .poem-card{
-    background:white;
-    padding:30px;
-    margin:25px auto;
-    border-radius:16px;
-    width:80%;
-    box-shadow:0 4px 15px rgba(0,0,0,0.08);
 
-    transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    background:white;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    min-height:250px;
+
+    cursor:pointer;
+
 }
 
 .poem-card:hover{
+
     transform:translateY(-8px);
-    box-shadow:0 8px 25px rgba(0,0,0,0.12);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+.poem-card:hover .poem-link{
+
+    color:#4b7fce;
+
 }
 
 .poem-link{
-    text-decoration:none;
+
+    font-size:1.7rem;
+
+    font-weight:700;
+
     color:#2d5da8;
-    font-size:1.6rem;
-    font-weight:bold;
+
+    transition:.3s;
+
+    text-align:center;
+
 }
 
 .poem-card p{
-    margin-top:15px;
-    color:#555;
+
+    margin-top:20px;
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:1rem;
+
 }
 
-/* =========================
-   ENTER BUTTON
-========================= */
+/*============== BUTTON ==============*/
 
 .enter-section{
+
     text-align:center;
-    margin-top:20px;
+
+    margin-top:70px;
+
 }
 
 .enter-button{
-    display:inline-block;
-    background:#5d8fd6;
-    color:white;
-    text-decoration:none;
-    padding:15px 35px;
-    border-radius:12px;
-    font-size:1.1rem;
-    font-weight:bold;
 
-    transition:
-    background 0.3s ease,
-    transform 0.3s ease;
+    display:inline-block;
+
+    background:#5d8fd6;
+
+    color:white;
+
+    padding:16px 40px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
 }
 
 .enter-button:hover{
-    background:#4a7cc4;
+
+    background:#4a79bf;
+
     transform:translateY(-3px);
+
 }
 
-/* =========================
-   FOOTER
-========================= */
+/*============== POEM PAGE ==============*/
+
+.poem-container{
+
+    background:white;
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:65px;
+
+    border-radius:24px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.poem-container h2{
+
+    text-align:center;
+
+}
+
+.poem-container p{
+
+    font-size:1.08rem;
+
+    color:#404040;
+
+    margin-bottom:28px;
+
+}
+
+/*============== NAVIGATION ==============*/
+
+.poem-navigation{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+
+    margin-top:50px;
+
+}
+
+.poem-navigation a{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.07);
+
+    transition:.3s;
+
+    color:#2d5da8;
+
+    font-weight:600;
+
+}
+
+.poem-navigation a:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+}
+
+/*============== COMMENTS ==============*/
+
+.comments-section{
+
+    background:white;
+
+    margin-top:60px;
+
+    border-radius:22px;
+
+    padding:40px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.07);
+
+}
+
+.comments-section h2{
+
+    color:#2d5da8;
+
+    margin-bottom:25px;
+
+}
+
+.comments-section p{
+
+    color:#666;
+
+}
+
+/*============== FORM ==============*/
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+input{
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid #d6ddeb;
+
+    font-size:1rem;
+
+}
+
+textarea{
+
+    padding:15px;
+
+    min-height:180px;
+
+    resize:vertical;
+
+    border-radius:10px;
+
+    border:1px solid #d6ddeb;
+
+    font-size:1rem;
+
+    font-family:inherit;
+
+}
+
+input:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:#5d8fd6;
+
+}
+
+button{
+
+    background:#5d8fd6;
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#4a79bf;
+
+}
+
+/*============== FOOTER ==============*/
 
 footer{
+
+    margin-top:80px;
+
     background:#b3d1ff;
-    color:#333;
+
     text-align:center;
-    padding:25px;
-    margin-top:60px;
+
+    padding:30px;
+
+    color:#444;
+
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
+/*============== SCROLLBAR ==============*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#edf4ff;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#78a5e3;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#5d8fd6;
+
+}
+
+/*============== ANIMATIONS ==============*/
+
+.hero,
+.intro-section,
+.poem-card,
+.poem-container,
+.comments-section{
+
+    animation:fadeUp .7s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*============== MOBILE ==============*/
+
+@media(max-width:900px){
+
+.poem-container{
+
+    padding:45px;
+
+}
+
+}
 
 @media(max-width:768px){
 
-    .hero h1{
-        font-size:2.8rem;
-    }
+.hero{
 
-    .subtitle{
-        font-size:1.1rem;
-    }
+    padding:55px 20px;
 
-    .intro-section{
-        padding:30px;
-    }
-
-    .intro-section h2{
-        font-size:2rem;
-    }
-
-    .featured-section h2{
-        font-size:2rem;
-    }
-
-    .poem-card{
-        width:95%;
-        padding:25px;
-    }
-
-    .poem-link{
-        font-size:1.3rem;
-    }
-
-    .enter-button{
-        width:90%;
-        text-align:center;
-    }
 }
+
+.hero-logo{
+
+    width:95px;
+
+}
+
+.main-container{
+
+    width:94%;
+
+}
+
+.intro-section{
+
+    padding:35px 25px;
+
+}
+
+.intro-section h2{
+
+    font-size:1.8rem;
+
+}
+
+.featured-section{
+
+    grid-template-columns:1fr;
+
+}
+
+.poem-card{
+
+    min-height:210px;
+
+    padding:28px;
+
+}
+
+.poem-link{
+
+    font-size:1.45rem;
+
+}
+
+.poem-container{
+
+    padding:35px 25px;
+
+}
+
+.poem-navigation{
+
+    grid-template-columns:1fr;
+
+}
+
+.comments-section{
+
+    padding:30px 25px;
+
+}
+
+.enter-button{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.hero h1{
+
+    font-size:2.2rem;
+
+}
+
+.subtitle{
+
+    font-size:1rem;
+
+}
+
+.intro-section{
+
+    padding:30px 20px;
+
+}
+
+.poem-card{
+
+    min-height:190px;
+
+    padding:25px;
+
+}
+
+.poem-link{
+
+    font-size:1.3rem;
+
+}
+
+.poem-container{
+
+    padding:28px 18px;
+
+}
+
+.poem-container p{
+
+    font-size:1rem;
+
+}
+
+footer{
+
+    padding:25px 15px;
+
+}
+
+}
+
